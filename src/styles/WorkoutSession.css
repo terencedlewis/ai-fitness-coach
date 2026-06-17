@@ -1,0 +1,238 @@
+/* WorkoutSession.css - Guided workout exercise flow */
+
+.session-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+/* Progress Bar */
+.progress-section {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.progress-text {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Exercise Card */
+.exercise-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.exercise-category {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.exercise-card h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* Rest Timer */
+.rest-timer {
+  margin-top: 1.5rem;
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #4CAF50;
+  margin: 1rem 0;
+  animation: countdown 1s ease-in-out infinite;
+}
+
+@keyframes countdown {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.rest-timer p {
+  color: #666;
+  margin: 1rem 0;
+}
+
+/* Exercise Actions */
+.exercise-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #4CAF50;
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+/* Completed Exercises List */
+.completed-list {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.completed-list h4 {
+  color: #667eea;
+  margin-top: 0;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.completed-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.completed-list li {
+  padding: 0.75rem 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.completed-list li:last-child {
+  border-bottom: none;
+}
+
+.checkmark {
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Session Complete State */
+.session-complete {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.session-complete h2 {
+  color: #4CAF50;
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
+}
+
+.session-complete p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-large {
+  padding: 1.25rem 2rem;
+  font-size: 1.1rem;
+  min-width: 200px;
+}
+
+@media (max-width: 480px) {
+  .session-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .exercise-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .exercise-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .timer-display {
+    font-size: 2.5rem;
+  }
+
+  .completed-list {
+    padding: 1rem;
+  }
+
+  .session-complete {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,169 @@
+/* Results.css - Analysis results display */
+
+.results-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+/* Fitness Summary Badge */
+.fitness-summary {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge-beginner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.badge-corrective {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.badge-intermediate {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.fitness-summary h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Detected Issues Section */
+.detected-issues {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #ff9800;
+}
+
+.detected-issues h3 {
+  color: #ff9800;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.detected-issues ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detected-issues li {
+  padding: 0.75rem 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.detected-issues li:before {
+  content: '⚠️';
+  flex-shrink: 0;
+}
+
+/* Workout Plan Section */
+.workout-plan {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.workout-plan h3 {
+  color: #333;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.plan-section {
+  margin-bottom: 1.5rem;
+}
+
+.plan-section:last-child {
+  margin-bottom: 0;
+}
+
+.plan-section h4 {
+  color: #667eea;
+  font-size: 1rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.plan-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-section li {
+  padding: 0.75rem 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.plan-section li:last-child {
+  border-bottom: none;
+}
+
+.plan-section li:before {
+  content: '✓';
+  color: #4CAF50;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.results-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-large {
+  padding: 1.25rem 2rem !important;
+  font-size: 1.1rem !important;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (max-width: 480px) {
+  .results-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .fitness-summary {
+    margin-bottom: 1.5rem;
+  }
+
+  .detected-issues,
+  .workout-plan {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .badge {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
